@@ -74,26 +74,22 @@ def game_over ():
         if (board[i][0] == board[i][1] == board[i][2] == players[current_player]):
             draw_line(i, 0, i, 2)
             win_screen (players[current_player] + " WINS!")
-            # print ()
             return True
 
     for i in range (0, 3):
         if (board[0][i] == board[1][i] == board[2][i] == players[current_player]):
             draw_line(0, i, 2, i)
             win_screen (players[current_player] + " WINS!")
-            # print (players[current_player] + " WINS!")
             return True
 
     if (board[0][0] == board[1][1] == board[2][2] == players[current_player]):
         draw_line(0, 0, 2, 2)
         win_screen (players[current_player] + " WINS!")
-        # print (players[current_player] + " WINS!")
         return True
 
     if (board[0][2] == board[1][1] == board[2][0] == players[current_player]):
         draw_line(0, 2, 2, 0)
         win_screen (players[current_player] + " WINS!")
-        # print (players[current_player] + " WINS!")
         return True
     
     return False
