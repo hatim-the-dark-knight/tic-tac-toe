@@ -92,6 +92,17 @@ def game_over ():
         win_screen (players[current_player] + " WINS!")
         return True
     
+    k = 0
+    for i in range (0, 3):
+        for j in range (0, 3):
+            if (board[i][j] != ' '):
+                k+=1
+
+    if (k == 9):
+        screen.fill (bg_color, (0, 0, screen_width, (screen_height-screen_width)/2 + 15))
+        render_text(font, 28, title_color, "DRAW!", (screen_width//2, (screen_height-screen_width)/2 - 15))
+        return True
+    
     return False
 
 
@@ -112,6 +123,11 @@ def restart ():
     for i in range(3):
         for j in range(3):
             board[i][j] = ' '
+
+
+def bots_turn (current_player):
+    return
+
 
 
 set_prototype_screen()
