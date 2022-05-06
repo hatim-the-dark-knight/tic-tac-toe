@@ -50,7 +50,6 @@ def set_prototype_screen():
     pygame.draw.rect (screen, line_color, pygame.Rect(0, (screen_height-screen_width)//2 + 15, screen_width, screen_width), 3)
     for i in range (2):
     	pygame.draw.line (screen, line_color, (square_size*(i+1),  (screen_height-screen_width)//2 + 15), (square_size*(i+1), (screen_height-screen_width)//2 +  15 + screen_width), 2)
-    for i in range (2):
     	pygame.draw.line (screen, line_color, (0, (screen_height-screen_width)//2 + 15+ square_size*(i+1)), (screen_width, (screen_height-screen_width)//2 + 15 + square_size*(i+1)), 2)
 
 
